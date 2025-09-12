@@ -150,45 +150,35 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="pagination">
-        <!--<a href="#" class="previous">Prev</a>-->
-        <a href="#" class="page active">1</a>
-        <a href="#" class="page">2</a>
-        <a href="#" class="page">3</a>
-        <span class="extra">&hellip;</span>
-        <a href="#" class="page">8</a>
-        <a href="#" class="page">9</a>
-        <a href="#" class="page">10</a>
-        <a href="#" class="next">Next</a>
-      </div>
-    </footer>
 
   </div>
 
   <!-- Footer -->
   <footer id="footer">
     <section>
-      <form method="post" action="#">
-        <div class="fields">
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" />
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="3"></textarea>
-          </div>
-        </div>
-        <ul class="actions">
-          <li><input type="submit" value="Send Message" /></li>
-        </ul>
-      </form>
+      <h3>Recent Writing</h3>
+      <ul id="medium-feed"></ul>
     </section>
+
+    <script>
+      async function loadMediumPosts() {
+        const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dashielashie";
+        try {
+          const res = await fetch(rssUrl);
+          const data = await res.json();
+          const list = document.getElementById("medium-feed");
+          data.items.slice(0, 3).forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
+            list.appendChild(li);
+          });
+        } catch (e) {
+          console.error("Error loading Medium feed", e);
+        }
+      }
+      loadMediumPosts();
+    </script>
+
     <section class="split contact">
       <section class="alt">
         <h3>Address</h3>

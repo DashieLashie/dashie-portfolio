@@ -1,0 +1,142 @@
+---
+---
+
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Summer Project - University of Glasgow</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <a href="../index.html" class="logo">Portfolio</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="../index.html">Engineering</a></li>
+            <li><a href="../music.html">Music</a></li>
+            <li><a href="../writing.html">Writing</a></li>
+            <li><a href="../photo.html">Photography</a></li>
+            <li><a href="../web.html">Web & Ecommerce</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://x.com/AlexG_DL?t=ZHT4dPFDtreiDwwPtbQ8FA&s=09" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/share/16bMVXXSr4/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/dashie_lashie?igsh=eGplMWUxYzEyaW8w" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://github.com/DashieLashie" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/enrique-alejandro-gonzalez-amador-9a36b3169/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Post -->
+        <section class="post">
+            <header class="major">
+                <span class="date">September 5, 2025</span>
+                <h1>Videogame Narrative Pitch<br />
+                    Singularity</h1>
+            </header>
+            <a href="#" class="image main"><img src="/images/marathon.jpg" alt="" /></a>
+            </iframe>
+            <!-- <div class="image main"><img src="images/pic01.jpg" alt="" /></div>-->
+            <p>It took many nights at the library at the University of Glasgow (it closes at 2am btw).
+                Many attempts and even more experiments and I had to start from scratch at least 3 times as I was becoming an expert on deep learning and realized the basic mistakes I was making on previous attempts.
+                The end result is a dissertation and source code that I'm genuinely proud of. Please feel free to check the dissertation and the source code, stars on GitHub are appreciated as always and my email is at the bottom of the web page for any comments or criticisms.
+            </p>
+
+            <a href="/files/Narrative_Pitch-Singularity.pdf" download class="button large">
+                Check the complete document
+            </a>
+
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h3>Recent Writing</h3>
+            <ul id="medium-feed"></ul>
+        </section>
+
+        <script>
+            async function loadMediumPosts() {
+                const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dashielashie";
+                try {
+                    const res = await fetch(rssUrl);
+                    const data = await res.json();
+                    const list = document.getElementById("medium-feed");
+                    data.items.slice(0, 3).forEach(item => {
+                        const li = document.createElement("li");
+                        li.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
+                        list.appendChild(li);
+                    });
+                } catch (e) {
+                    console.error("Error loading Medium feed", e);
+                }
+            }
+            loadMediumPosts();
+        </script>
+
+        <section class="split contact">
+            <section class="alt">
+                <h3>Address</h3>
+                <p>17 Cooperage Pl<br />
+                    Glasgow, G3 8QP</p>
+            </section>
+            <section>
+                <h3>Phone</h3>
+                <p><a href="tel:+447440119553">+44 (7440) 119-553</a></p>
+            </section>
+            <section>
+                <h3>Email</h3>
+                <p><a href="mailto:dashielashie@proton.me">dashielashie@proton.me</a></p>
+            </section>
+            <section>
+                <h3>Social</h3>
+                <ul class="icons alt">
+                    <li><a href="https://x.com/AlexG_DL?t=ZHT4dPFDtreiDwwPtbQ8FA&s=09" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/share/16bMVXXSr4/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/dashie_lashie?igsh=eGplMWUxYzEyaW8w" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://github.com/DashieLashie" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/enrique-alejandro-gonzalez-amador-9a36b3169/" class="icon brands fa-linkedin"><span class="label">GitHub</span></a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul><li>&copy; DashieLashie</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.scrollex.min.js"></script>
+<script src="../assets/js/jquery.scrolly.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

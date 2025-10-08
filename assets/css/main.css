@@ -4687,3 +4687,19 @@ input, select, textarea {
 		}
 
 	}
+
+.image.fit {
+    position: relative;
+    width: 100%;
+    max-width: 600px;   /* optional: limit width */
+    height: 350px;      /* this defines your crop height */
+    overflow: hidden;   /* hides overflow (cropping effect) */
+}
+
+.image.fit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* crop image to fill the frame */
+    object-position: center; /* adjust focus (e.g. 'top', 'bottom', '50% 40%') */
+    display: block;
+}
